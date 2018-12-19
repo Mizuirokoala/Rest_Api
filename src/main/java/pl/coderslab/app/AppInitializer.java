@@ -27,4 +27,3 @@ public class AppInitializer extends
         return new Filter[] { characterEncodingFilter };
     }
 }
-
