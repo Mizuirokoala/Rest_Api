@@ -1,4 +1,4 @@
-package pl.coderslab.model;
+package pl.coderslab.beans;
 
 import java.util.List;
 
