@@ -12,15 +12,16 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter
 @EnableWebMvc
 @ComponentScan(basePackages = "pl.coderslab")
 public class AppConfig extends WebMvcConfigurerAdapter {
-
     @Override
-    public void addCorsMapping(CorsRegistry registry){
+    public void addCorsMappings(CorsRegistry registry) {
         registry.addMapping("/**")
-                .allowedMethods("GET","POST","PUT","DELETE")
+                .allowedMethods("GET", "POST", "PUT", "DELETE")
                 .allowedOrigins("http://localhost");
     }
+
     @Override
-    public void configureDeafaultServletHandling(DefaultServletHandlerConfigurer configurer){
+    public void configureDefaultServletHandling(
+            DefaultServletHandlerConfigurer configurer) {
         configurer.enable();
     }
 }
